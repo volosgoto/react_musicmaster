@@ -15,6 +15,9 @@ class App extends Component {
 
   }
 
+  search(){
+    console.log('this.state', this.state);
+  }
 
   render(){
     return(
@@ -25,8 +28,10 @@ class App extends Component {
             <FormControl
               type="text"
               placeholder="search for artist..."
+              value = { this.state.query }
+              onChange = { event => { this.setState({query: event.target.value}) } }
             />
-            <InputGroup.Addon>
+            <InputGroup.Addon onClick = { ()=> this.search() }>
             <Glyphicon glyph="search"></Glyphicon>
             </InputGroup.Addon>
           </InputGroup>
