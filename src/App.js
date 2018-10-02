@@ -5,7 +5,17 @@ import {FormGroup, FormControl, InputGroup, Glyphicon} from 'react-bootstrap';
 
 
 class App extends Component {
-  
+  constructor(props){
+    super(props);
+
+    this.state = {
+      // User search input
+      query: ''
+    }
+
+  }
+
+
   render(){
     return(
       <div className="App">
