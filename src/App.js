@@ -17,12 +17,13 @@ class App extends Component {
 
   search(){
     console.log('this.state', this.state);
-    const BASE_URL = 'https://api.deezer.com/search?';
-    const FETCH_URL = `${BASE_URL}q=artist:${this.state.query}`;
-
-    console.log('FETCH_URL', FETCH_URL);
-                      
-  }
+    // const BASE_URL = 'https://api.deezer.com/search?';
+    let FETCH_URL = `https://cors-anywhere.herokuapp.com/http://api.deezer.com/search/track/autocomplete?limit=1&q=${this.state.query}`;
+    
+    fetch(FETCH_URL)
+      .then(response => response.json())
+      .then(json => console.log(json));
+}  
 
   render(){
     return(
