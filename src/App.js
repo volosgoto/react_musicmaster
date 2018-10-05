@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import {FormGroup, FormControl, InputGroup, Glyphicon} from 'react-bootstrap';
-
+import Profile from './Profile';
 
 
 class App extends Component {
@@ -24,14 +24,12 @@ class App extends Component {
     fetch(FETCH_URL) 
       .then(response => response.json())
       .then(json => {
-        const artist = json.data[0].artist;
-        // console.log(artist);
+        // let artist = json.data[0].artist;
+        let artist = json.data[0];
         this.setState({ artist : artist})
-
-
         
       })
-      .catch(err => console.log('error', err));
+      // .catch(err => console.log('error', err));
 }  
 
   render(){
@@ -60,10 +58,15 @@ class App extends Component {
           <input placeholder=""/>
           <button>Search</button>
         </div> */}
-        <div className="Profile"> 
+        {/* <div className="Profile"> 
           <div>Artist name</div>
           <div>Artist picture</div>
-        </div>
+        </div> */}
+
+        <Profile 
+          artist = {this.state.artist}
+        />
+
         <div className="Gallery">
           Gallery
         </div>
