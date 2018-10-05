@@ -1,0 +1,43 @@
+[[PromiseValue]]: Object
+data: Array(1)
+0:
+album:
+cover: "http://api.deezer.com/album/74436652/image"
+cover_big: "http://e-cdn-images.deezer.com/images/cover/c257c53b0fdc9a356da3dfdeb257c3b1/500x500-000000-80-0-0.jpg"
+cover_medium: "http://e-cdn-images.deezer.com/images/cover/c257c53b0fdc9a356da3dfdeb257c3b1/250x250-000000-80-0-0.jpg"
+cover_small: "http://e-cdn-images.deezer.com/images/cover/c257c53b0fdc9a356da3dfdeb257c3b1/56x56-000000-80-0-0.jpg"
+cover_xl: "http://e-cdn-images.deezer.com/images/cover/c257c53b0fdc9a356da3dfdeb257c3b1/1000x1000-000000-80-0-0.jpg"
+id: 74436652
+title: "NOW That's What I Call Merry Christmas"
+tracklist: "http://api.deezer.com/album/74436652/tracks"
+type: "album"
+__proto__: Object
+artist:
+id: 617
+link: "http://www.deezer.com/artist/617"
+name: "Frank Sinatra"
+picture: "http://api.deezer.com/artist/617/image"
+picture_big: "http://e-cdn-images.deezer.com/images/artist/e22ed29d34715f53323c6d190410a27c/500x500-000000-80-0-0.jpg"
+picture_medium: "http://e-cdn-images.deezer.com/images/artist/e22ed29d34715f53323c6d190410a27c/250x250-000000-80-0-0.jpg"
+picture_small: "http://e-cdn-images.deezer.com/images/artist/e22ed29d34715f53323c6d190410a27c/56x56-000000-80-0-0.jpg"
+picture_xl: "http://e-cdn-images.deezer.com/images/artist/e22ed29d34715f53323c6d190410a27c/1000x1000-000000-80-0-0.jpg"
+tracklist: "http://api.deezer.com/artist/617/top?limit=50"
+type: "artist"
+__proto__: Object
+duration: 119
+explicit_lyrics: false
+id: 561865762
+link: "http://www.deezer.com/track/561865762"
+preview: "http://cdn-preview-0.deezer.com/stream/c-0d5bf9e9480bd746860f434eb7442c07-3.mp3"
+rank: 660807
+readable: true
+title: "Jingle Bells (Remastered 1999)"
+title_short: "Jingle Bells"
+title_version: "(Remastered 1999)"
+type: "track"
+__proto__: Object
+length: 1
+__proto__: Array(0)
+next: "http://api.deezer.com/search/track/autocomplete?limit=1&q=Frank%20Sinatra&index=1"
+total: 289
+__proto__: Object
