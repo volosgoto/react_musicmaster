@@ -10,7 +10,8 @@ class App extends Component {
 
     this.state = {
       // User search input
-      query: ''
+      query : '',
+      artist : null
     }
 
   }
@@ -23,8 +24,11 @@ class App extends Component {
     fetch(FETCH_URL) 
       .then(response => response.json())
       .then(json => {
-        const artist = json.data[0].artist.name;
-        console.log(artist);
+        const artist = json.data[0].artist;
+        // console.log(artist);
+        this.setState({ artist : artist})
+
+
         
       })
       .catch(err => console.log('error', err));
