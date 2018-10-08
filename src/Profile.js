@@ -16,7 +16,8 @@ class Profile extends Component {
     return (
       <div>
         <div>{ artist.artist.name }</div>
-        <div>{ artist.rank }</div>
+        <div>{ artist.rank}</div>
+        <audio src={artist.preview}></audio>
       </div>
     )
   }
