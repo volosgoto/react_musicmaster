@@ -23,13 +23,30 @@ class App extends Component {
     fetch(FETCH_URL) 
       .then(response => response.json())
       .then(json => {
-        // let artist = json.data[0].artist;
         let artist = json.data[0];
+        // let album = json.data[0]
+        // let tracklist = 'https://cors-anywhere.herokuapp.com/http://api.deezer.com/album/74436652/tracks';
+
+        // fetch(tracklist).then(response => console.log(response));
+
+        console.log('artist', artist);
+        
+
         this.setState({ artist : artist})
         
+        // let tracklist = json.data[0].artist.tracklist;
+        // let FETCH_TRACK = tracklist;
+        // fetch(FETCH_TRACK)
+        //   .then(response => response.json())
+        //   .then(json => {
+        //     let tracklist = json.json.data;
+        //     console.log(tracklist);
+        //   })
+        //   .catch(err => console.log('error tracklist', err));
       })
-      // .catch(err => console.log('error', err));
+      .catch(err => console.log('error fetch data', err));
 }  
+
 
   render(){
     return(
@@ -53,22 +70,17 @@ class App extends Component {
             </InputGroup.Addon>
           </InputGroup>
           </FormGroup>
-        {/* <div>
-          <input placeholder=""/>
-          <button>Search</button>
-        </div> */}
-        {/* <div className="Profile"> 
-          <div>Artist name</div>
-          <div>Artist picture</div>
-        </div> */}
+          {
+            this.state.artist !== null 
+            ? <div>
+                  <Profile artist = {this.state.artist}/>
+                  <div className="Gallery">
+                    Gallery
+                  </div>
+              </div>
+            : <div></div>
+          }
 
-        <Profile 
-          artist = {this.state.artist}
-        />
-
-        <div className="Gallery">
-          Gallery
-        </div>
       </div>
     );
   }

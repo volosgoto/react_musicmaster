@@ -4,23 +4,40 @@ import './App.css';
 class Profile extends Component {
   render() {
     
-    let artist = {artist : {artist : {name: '', rank: '', picture: ''} }};
+    let artist = { artist : {
+                      artist : {
+                        name: '', 
+                        rank: '', 
+                        picture: '', 
+                        tracklist: ''
+                      } 
+                    },
+                    album: {
+                      title: '',
+                      cover: '',
+                      // tracklist: data[{}]
+                      tracklist: ''
+                  
+                    } 
+                  };
       
-    // if (this.props.artist !== null)  {
-    //   // console.log('props', this.props);
-    //   console.log('props.artist', this.props.artist);
-    //   artist = this.props.artist;
-    // }
-      
-    artist = this.props.artist !== null ? this.props.artist : artist
-
+    artist = this.props.artist !== null ? this.props.artist : artist;
+    console.log('props', this.props);
+    
     
     return (
       <div>
-        <div>Artist: { artist.artist.name }</div>
-        <img className="profile-img" src={artist.artist.picture } alt="Artist profile img"/>
-        <div>Rank: { artist.rank}</div>
-        <div><a href={artist.preview}>Song Preview</a></div>
+        
+        <div className = "profile-info">
+          <div className = "profile-name">Artist: { artist.artist.name }</div>
+          <img className="profile-img" src={artist.artist.picture } alt="Artist profile"/> 
+          <div>Album: {artist.album.title}</div> 
+          <div>Album: {artist.album.tracklist }</div> 
+          <img className="album-img" src={artist.album.cover } alt="Album cover"/> 
+          <div>Rank: { artist.rank}</div> 
+          <div><a href={artist.preview}>Song Preview</a></div>
+        </div>
+        
       </div>
     )
   }
