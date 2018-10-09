@@ -18,27 +18,20 @@ class App extends Component {
 
   search(){
     // console.log('this.state', this.state);
-    // const BASE_URL = 'https://api.deezer.com/search?';
-    let FETCH_URL = `https://cors-anywhere.herokuapp.com/http://api.deezer.com/search/track/autocomplete?limit=1&q=${this.state.query}`;
+    const BASE_URL = 'https://cors-anywhere.herokuapp.com/';
+    let FETCH_URL = `${BASE_URL}http://api.deezer.com/search/track/autocomplete?limit=1&q=${this.state.query}`;
     
     fetch(FETCH_URL) 
       .then(response => response.json())
       .then(json => {
         let artist = json.data[0];
-        // console.log('artist id', artist.id);
-        
-        // let album = json.data[0]
-        // let tracklist = 'https://cors-anywhere.herokuapp.com/http://api.deezer.com/album/74436652/tracks';
 
-        // fetch(tracklist).then(response => console.log('response', response.json()));
-
-        // console.log('artist', artist);
-        
+        console.log('artist', artist.id);
 
         this.setState({ artist : artist})
         
-        // let tracklist = json.data[0].artist.tracklist;
-        // let FETCH_TRACK = tracklist;
+        
+        // FETCH_URL = `${BASE_URL}`;
         // fetch(FETCH_TRACK)
         //   .then(response => response.json())
         //   .then(json => {

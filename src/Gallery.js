@@ -9,35 +9,38 @@ class Gallery extends Component {
 
 
     return (
-      <div>
-        { tracks.map( (track, k) => {
-          let trackImg = '';
-          return (
-          <div>
+      // <div>
+      //   { tracks.map( (track, k) => {
+      //     let trackImg = '';
+      //     return (
+      //     <div>
             
-            <div
-            key = {k}
-            className = "track"
-          >
-            <img 
-              src={trackImg} 
-              className = "track-img" 
-              alt="track"
+      //       <div
+      //       key = {k}
+      //       className = "track"
+      //     >
+      //       <img 
+      //         src={trackImg} 
+      //         className = "track-img" 
+      //         alt="track"
 
-            />
-          </div>
-          <p className = "track-text">
-            {/* {track.name} */}
-          </p>
+      //       />
+      //     </div>
+      //     <p className = "track-text">
+      //       {/* {track.name} */}
+      //     </p>
           
-          </div>
+      //     </div>
           
 
-          ); 
-        } ) 
+      //     ); 
+      //   } ) 
 
-        }
+      //   }
 
+      // </div>
+      <div>
+        
       </div>
     )
   }

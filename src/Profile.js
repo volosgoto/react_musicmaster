@@ -12,13 +12,12 @@ class Profile extends Component {
                         tracklist: ''
                       } 
                     },
-                    album: {
-                      title: '',
-                      cover: '',
-                      // tracklist: data[{}]
-                      tracklist: ''
+                    // album: {
+                    //   title: '',
+                    //   cover: '',
+                    //   tracklist: ''
                   
-                    } 
+                    // } 
                   };
       
     artist = this.props.artist !== null ? this.props.artist : artist;
@@ -31,11 +30,11 @@ class Profile extends Component {
         <div className = "profile-info">
           <div className = "profile-name">Artist: { artist.artist.name }</div>
           <img className="profile-img" src={artist.artist.picture } alt="Artist profile"/> 
-          <div>Album: {artist.album.title}</div> 
-          <div>Tracks: {artist.album.tracklist.title }</div> 
-          <img className="album-img" src={artist.album.cover } alt="Album cover"/> 
+          {/* <div>Album: {artist.album.title}</div>  */}
+          {/* <div>Tracks: {artist.album.tracklist.title }</div>  */}
+          {/* <img className="album-img" src={artist.album.cover } alt="Album cover"/>  */}
           <div>Rank: { artist.rank}</div> 
-          <div><a href={artist.preview}>Song Preview</a></div>
+          <div><a href={artist.preview}>Preview</a></div>
         </div>
         
       </div>
