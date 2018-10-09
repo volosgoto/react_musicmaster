@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import {FormGroup, FormControl, InputGroup, Glyphicon} from 'react-bootstrap';
 import Profile from './Profile';
+import Gallery from './Gallery';
 
 
 class App extends Component {
@@ -24,12 +25,14 @@ class App extends Component {
       .then(response => response.json())
       .then(json => {
         let artist = json.data[0];
+        // console.log('artist id', artist.id);
+        
         // let album = json.data[0]
         // let tracklist = 'https://cors-anywhere.herokuapp.com/http://api.deezer.com/album/74436652/tracks';
 
-        // fetch(tracklist).then(response => console.log(response));
+        // fetch(tracklist).then(response => console.log('response', response.json()));
 
-        console.log('artist', artist);
+        // console.log('artist', artist);
         
 
         this.setState({ artist : artist})
@@ -74,9 +77,9 @@ class App extends Component {
             this.state.artist !== null 
             ? <div>
                   <Profile artist = {this.state.artist}/>
-                  <div className="Gallery">
-                    Gallery
-                  </div>
+                  <Gallery 
+                    tracks = { this.state.tracks }
+                  />
               </div>
             : <div></div>
           }
