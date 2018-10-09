@@ -23,7 +23,10 @@ body{
 
 .profile-info{
   margin-left: 10px;
-  text-align: left
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .profile-img {
@@ -47,6 +50,18 @@ body{
 }
 
 
-.Gallery{
+/* .Gallery */
 
+.track {
+  width: 220px;
+  height: 220px;
+  border: 3px solid white;
+  border-radius: 3px;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.track-img {
+  
 }
