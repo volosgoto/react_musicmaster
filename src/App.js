@@ -37,16 +37,13 @@ class App extends Component {
         fetch(fetchTrackList)
             .then(response => response.json())
             .then(json => {
-               console.log('json tracks', json);
-              
-              let tracks = json.data;
+              let tracks = json.data[0].title;
               this.setState( { tracks } );
             })
             .catch(err => console.log('track error fetch data', err));
           })
       .catch(err => console.log('artist error fetch data', err));
 }  
-
 
   render(){
     return(
