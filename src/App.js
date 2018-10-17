@@ -18,29 +18,33 @@ class App extends Component {
 
   search(){
     // console.log('this.state', this.state);
-    const BASE_URL = 'https://cors-anywhere.herokuapp.com/';
+    const BASE_URL = 'https://cors-anywhere.herokuapp.com/';  // ITS DONT WORK
     let FETCH_URL = `${BASE_URL}http://api.deezer.com/search/track/autocomplete?limit=1&q=${this.state.query}`;
     
-    fetch(FETCH_URL) 
+    fetch(FETCH_URL, {
+      method: "GET"
+      }
+    )
       .then(response => response.json())
       .then(json => {
         let artist = json.data[0];
 
-        console.log('artist', artist.id);
+        // console.log('artist', artist);
 
         this.setState({ artist : artist})
         
-        
-        // FETCH_URL = `${BASE_URL}`;
-        // fetch(FETCH_TRACK)
-        //   .then(response => response.json())
-        //   .then(json => {
-        //     let tracklist = json.json.data;
-        //     console.log(tracklist);
-        //   })
-        //   .catch(err => console.log('error tracklist', err));
-      })
-      .catch(err => console.log('error fetch data', err));
+        let fetchTrackList = BASE_URL + artist.artist.tracklist;
+        fetch(fetchTrackList)
+            .then(response => response.json())
+            .then(json => {
+               console.log('json tracks', json);
+              
+              let tracks = json.data;
+              this.setState( { tracks } );
+            })
+            .catch(err => console.log('track error fetch data', err));
+          })
+      .catch(err => console.log('artist error fetch data', err));
 }  
 
 

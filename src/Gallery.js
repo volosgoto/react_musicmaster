@@ -3,9 +3,9 @@ import './App.css';
 
 class Gallery extends Component {
   render() {
-    console.log('gallery props', this.props);
     // let tracks = this.props.tracks;
-    let { tracks }= this.props;
+    let { tracks } = this.props;
+      console.log('Gallery props', this.props);
 
 
     return (
